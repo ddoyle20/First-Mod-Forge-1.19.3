@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " x ",
+    " x ",
+    " 1 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "x": {
+      "item": "firstmod:kalixium_ingot"
+    }
+  },
+  "result": {
+    "item": "firstmod:kalixium_sword"
+  }
+}

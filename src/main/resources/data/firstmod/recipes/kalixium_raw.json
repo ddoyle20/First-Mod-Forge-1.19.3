@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "firstmod:kalixium_block_raw"
+    }
+  ],
+  "result": {
+    "item": "firstmod:raw_kalixium_ore",
+    "count": 9
+  }
+}

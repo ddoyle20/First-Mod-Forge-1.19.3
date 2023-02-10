@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "firstmod:kalixium_block",
+    "firstmod:kalixium_block_raw",
+    "firstmod:kalixium_ore",
+    "firstmod:deepslate_kalixium_ore"
+  ]
+}

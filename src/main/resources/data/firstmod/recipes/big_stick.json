@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "firstmod:big_stick_block"
+    }
+  ],
+  "result": {
+    "item": "firstmod:big_stick",
+    "count": 9
+  }
+}

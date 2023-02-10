@@ -1,0 +1,16 @@
+{
+  "item.firstmod.big_stick": "Big Stick",
+  "item.firstmod.kalixium_ingot": "Kalixium Ingot",
+  "item.firstmod.raw_kalixium_ore": "Raw Kalixium",
+  "item.firstmod.kalixium_sword": "Kalixium Sword",
+
+  "block.firstmod.big_stick_block": "Big Stick Block",
+  "block.firstmod.big_stick_ore": "Big Stick Ore",
+  "block.firstmod.kalixium_block": "Kalixium Block",
+  "block.firstmod.kalixium_block_raw": "Raw Kalixium Block",
+  "block.firstmod.deepslate_kalixium_ore": "Deepslate Kalixium Ore",
+  "block.firstmod.kalixium_ore": "Kalixium Ore",
+
+
+  "creativemodetab.first_tab": "Kalixium"
+}

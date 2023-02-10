@@ -1,27 +1,19 @@
 package com.thegreasycarrot.firstmod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.BlockItem;
+import com.thegreasycarrot.firstmod.block.ModBlocks;
+import com.thegreasycarrot.firstmod.item.ModCreativeModeTabs;
+import com.thegreasycarrot.firstmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -37,6 +29,9 @@ public class FirstMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModBlocks.register((modEventBus));
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -49,7 +44,20 @@ public class FirstMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-
+        // Checks if the current creative tab is the combat tab
+        if(event.getTab() == ModCreativeModeTabs.FIRST_TAB) {
+            // Adds the big stick to the creative menu
+            event.accept(ModItems.BIG_STICK);
+            event.accept(ModBlocks.BIG_STICK_BLOCK);
+            event.accept(ModBlocks.BIG_STICK_ORE);
+            event.accept(ModBlocks.KALIXIUM_BLOCK);
+            event.accept(ModItems.KALIXIUM_INGOT);
+            event.accept(ModItems.KALIXIUM_SWORD);
+            event.accept(ModItems.RAW_KALIXIUM_ORE);
+            event.accept(ModBlocks.KALIXIUM_BLOCK_RAW);
+            event.accept(ModBlocks.KALIXIUM_ORE);
+            event.accept(ModBlocks.DEEPSLATE_KALIXIUM_ORE);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
